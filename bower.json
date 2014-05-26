@@ -1,0 +1,28 @@
+{
+  "name": "ng-bs-animated-button",
+  "version": "0.0.0",
+  "authors": [
+    "Jeremy Peters <jezpeters@googlemail.com>"
+  ],
+  "description": "Angular/Bootstrap animated submit button directive",
+  "main": "ng-bs-animated-button.js",
+  "keywords": [
+    "Angular",
+    "AngularJS",
+    "Bootstrap",
+    "submit",
+    "form",
+    "button"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+   "dependencies": {
+    "angular": "~1.0.6"
+  }
+}
