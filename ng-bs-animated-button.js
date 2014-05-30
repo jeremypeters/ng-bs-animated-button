@@ -1,4 +1,4 @@
-angular.module('jeremy-peters.ng-bs-animated-button', []).
+angular.module('jp.ng-bs-animated-button', []).
   directive('jpNgBsAnimatedButton', function($timeout) {
     return {
       restrict: 'AE',
