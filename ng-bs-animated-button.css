@@ -1,3 +1,11 @@
+@keyframes btn-ng-bs-rotation {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 .btn-ng-bs-animated .icons {
   opacity: 0;
   width: 0;
@@ -12,5 +20,5 @@
   margin-right: 10px;
 }
 .btn-ng-bs-animated.is-active .icons .icon-spinner {
-  animation: rotation 2s infinite linear;
+  animation: btn-ng-bs-rotation 2s infinite linear;
 }
