@@ -24,15 +24,13 @@ angular.module('jeremy-peters.ng-bs-animated-button', []).
         var iconSubmitting = el.find('[data-icon="submitting"]');
         var iconComplete = el.find('[data-icon="complete"]');
         var endAnimation = function() {
-          el.removeClass('is-active');
+          el.removeClass('is-active').attr('disabled', false);
           iconComplete.hide();
           scope.progressIsComplete = false;
-          el.attr('disabled', false);
         };
         scope.$watch('progressIsSubmit', function(newValue) {
             if (newValue) {
-              el.attr('disabled', true);
-              el.addClass('is-active');
+              el.attr('disabled', true).addClass('is-active');
               iconSubmitting.show();
             }
           }, true).bind(this);
