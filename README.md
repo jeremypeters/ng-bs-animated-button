@@ -9,7 +9,7 @@ Angular/Bootstrap animated submit button directive
 3. Insert the `jp-ng-bs-animated-button` directive into your template:
 
 ```html
-<jp-ng-bs-animated-button progress-is-submit="" progress-is-complete=""  animation-complete-time="" button-class="" button-text="" form-is-invalid=""></jp-ng-bs-animated-button>
+<jp-ng-bs-animated-button progress-is-submit="" progress-is-complete="" animation-complete-time="" button-class="" button-text="" form-is-invalid=""></jp-ng-bs-animated-button>
 ```
 
 ### Attributes
