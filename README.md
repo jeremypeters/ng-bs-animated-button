@@ -2,7 +2,7 @@
 
 Angular/Bootstrap animated submit button directive.
 
-[View demo](http://plnkr.co/edit/3nlNi9oTRiRZND5rqTpR?p=info)
+[View demo](http://plnkr.co/edit/1nYX1E?p=info)
 
 
 ## Usage
