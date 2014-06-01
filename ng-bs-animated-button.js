@@ -14,30 +14,30 @@ angular.module('jp.ng-bs-animated-button', []).
       template:
         '<button type="submit" class="btn {{buttonClass}} btn-ng-bs-animated clearfix" ng-disabled="formIsInvalid">' +
           '<div class="icons pull-left">' +
-            '<span class="glyphicon glyphicon-refresh icon-spinner" data-icon="submitting"></span>' +
-            '<span class="glyphicon glyphicon-ok" data-icon="complete"></span>' +
+            '<span id="" class="glyphicon glyphicon-refresh icon-spinner icon-submit hidden"></span>' +
+            '<span id="" class="glyphicon glyphicon-ok icon-complete hidden"></span>' +
           '</div>' +
           '<div class="text pull-right">{{buttonText}}</div>' +
         '</button>',
       link: function(scope, element) {
-        var el = element;
-        var iconSubmitting = el.find('[data-icon="submitting"]');
-        var iconComplete = el.find('[data-icon="complete"]');
+        var el = angular.element(element);
+        var iconSubmitting = angular.element(el[0].querySelector('.icon-submit'));
+        var iconComplete = angular.element(el[0].querySelector('.icon-complete'));
         var endAnimation = function() {
           el.removeClass('is-active').attr('disabled', false);
-          iconComplete.hide();
+          iconComplete.addClass('hidden');
           scope.progressIsComplete = false;
         };
         scope.$watch('progressIsSubmit', function(newValue) {
             if (newValue) {
               el.attr('disabled', true).addClass('is-active');
-              iconSubmitting.show();
+              iconSubmitting.removeClass('hidden');
             }
           }, true).bind(this);
         scope.$watch('progressIsComplete', function(newValue) {
             if (newValue) {
-              iconSubmitting.hide();
-              iconComplete.show();
+              iconSubmitting.addClass('hidden');
+              iconComplete.removeClass('hidden');
               scope.progressIsSubmit = false;
               $timeout(endAnimation, scope.animationCompleteTime);
             }
