@@ -1,3 +1,33 @@
+@-webkit-keyframes btn-ng-bs-rotation {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-moz-keyframes btn-ng-bs-rotation {
+    0% {
+        -moz-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-o-keyframes btn-ng-bs-rotation {
+    0% {
+        -o-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
 @keyframes btn-ng-bs-rotation {
     0% {
         transform: rotate(0);
@@ -20,5 +50,8 @@
   margin-right: 10px;
 }
 .btn-ng-bs-animated.is-active .icons .icon-spinner {
-  animation: btn-ng-bs-rotation 2s infinite linear;
+  -webkit-animation: btn-ng-bs-rotation 2s infinite linear;
+  -moz-animation: btn-ng-bs-rotation 2s infinite linear;
+  -o-animation: btn-ng-bs-rotation 2s infinite linear;
+  animation: btn-ng-bs-rotation 2s infinite linear;  
 }
