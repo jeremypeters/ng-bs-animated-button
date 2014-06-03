@@ -14,8 +14,8 @@ angular.module('jp.ng-bs-animated-button', []).
       template:
         '<button type="submit" class="btn {{buttonClass}} btn-ng-bs-animated clearfix" ng-disabled="formIsInvalid">' +
           '<div class="icons pull-left">' +
-            '<span id="" class="glyphicon glyphicon-refresh icon-spinner icon-submit hidden"></span>' +
-            '<span id="" class="glyphicon glyphicon-ok icon-complete hidden"></span>' +
+            '<span class="glyphicon glyphicon-refresh icon-spinner icon-submit hidden"></span>' +
+            '<span class="glyphicon glyphicon-ok icon-complete hidden"></span>' +
           '</div>' +
           '<div class="text pull-right">{{buttonText}}</div>' +
         '</button>',
