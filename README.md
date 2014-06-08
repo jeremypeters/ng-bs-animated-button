@@ -12,13 +12,19 @@ Angular/Bootstrap animated submit button directive.
 
 2. Include `ng-bs-animated-button.js` and `ng-bs-animated-button.css` in your app. They should be located at `bower_components/ng-bs-animated-button/`.
 
-3. Add the directive with the required attributes to your template:
+3. Inject jpNgBsAnimatedButton in your application module:
+
+  ```JavaScript
+  angular.module('yourApp', ['jp.ng-bs-animated-button']);
+  ```
+
+4. Add the directive with the required attributes to your template:
 
   ```html
   <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
   ```
 
-4. Add the required scope variables and any options to your controller:
+5. Add the required scope variables and any options to your controller:
 
   ```JavaScript
   app.controller('yourCtrl', function($scope) {
