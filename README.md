@@ -5,7 +5,7 @@ Angular/Bootstrap animated submit button directive.
 
 ## Usage
 1. Install via Bower:
-
+ 
   ```console
   bower install jeremypeters/ng-bs-animated-button
   ```
