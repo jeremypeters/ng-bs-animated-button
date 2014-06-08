@@ -1,1 +1,263 @@
-test
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>ng-bs-animated-button</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/ng-bs-animated-button.css">
+  </head>
+  <body ng-app="demoApp">
+    <div class="container-fluid">
+        <div class="page-header">
+            <h1><a href="https://github.com/jeremypeters/ng-bs-animated-button">ng-bs-animated-button</a><br /><small>Angular/Bootstrap animated submit button directive</small></h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+              <h3>Demos</h3>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <strong>Demo 1: </strong>Default options | success
+                  </div>
+                  <div class="panel-body">
+                    <form name="form" role="form" ng-controller="demo1Ctrl" ng-submit="fakeSubmit()">
+                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                    </form>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <strong>Demo 2: </strong>Default options | error
+                  </div>
+                  <div class="panel-body">
+                    <form name="form" role="form" ng-controller="demo2Ctrl" ng-submit="fakeSubmit()">
+                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                    </form>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <strong>Demo 3: </strong>Icons on right
+                  </div>
+                  <div class="panel-body">
+                    <form name="form" role="form" ng-controller="demo3Ctrl" ng-submit="fakeSubmit()">
+                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                    </form>
+                    <br />
+<pre>
+$scope.options = {
+  iconsPosition: 'right'
+};
+</pre>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <strong>Demo 4: </strong>Different colours for each state
+                  </div>
+                  <div class="panel-body">
+                    <form name="form" role="form" ng-controller="demo4Ctrl" ng-submit="fakeSubmit()">
+                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                    </form>
+                    <br />
+<pre>
+$scope.options = {
+  buttonDefaultClass: 'btn-default',
+  buttonSubmittingClass: 'btn-info',
+  buttonSuccessClass: 'btn-success'
+};
+</pre>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <strong>Demo 5: </strong>Custom text for each state
+                  </div>
+                  <div class="panel-body">
+                    <form name="form" role="form" ng-controller="demo5Ctrl" ng-submit="fakeSubmit()">
+                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                    </form>
+                    <br />
+<pre>
+$scope.options = {
+  buttonDefaultText: 'Lorem ipsum',
+  buttonSubmittingText: 'Dolor sit amet',
+  buttonSuccessText: 'Consectetur elit'
+};
+</pre>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <strong>Demo 6: </strong>Using Font Awesome icons
+                  </div>
+                  <div class="panel-body">
+                    <form name="form" role="form" ng-controller="demo6Ctrl" ng-submit="fakeSubmit()">
+                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                    </form>
+                    <br />
+<pre>
+$scope.options = {
+  buttonSubmittingIcon: 'fa fa-spinner',
+  buttonSuccessIcon: 'fa fa-smile-o',
+};
+</pre>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <strong>Demo 7: </strong>Custom animation complete hold timing
+                  </div>
+                  <div class="panel-body">
+                    <form name="form" role="form" ng-controller="demo7Ctrl" ng-submit="fakeSubmit()">
+                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                    </form>
+                    <br />
+<pre>
+$scope.options = {
+  animationCompleteTime: '5000'
+};
+</pre>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+              <h3>Install</h3>
+              <kbd>bower install jeremypeters/ng-bs-animated-button</kbd>
+              <h3>Usage</h3>
+              <p>Add as a module dependency to your app:</p>
+<pre>
+angular.module('yourApp', ['jp.ng-bs-animated-button']);
+</pre>
+              <p>Add the directive to your template:</p>
+<pre>
+&lt;jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"&gt;&lt;/jp-ng-bs-animated-button&gt;
+</pre>
+              <p>Add the required scope variables and any options to your controller:</p>
+<pre>
+app.controller('yourCtrl', function($scope) {
+
+  <strong><em>// Required - set to true on submission</em></strong>
+  $scope.isSubmitting = null;
+
+  <strong><em>// Required - set to 'success' or 'error' on success/failure</em></strong>
+  $scope.result = null;
+
+  <strong><em>// Optional</em></strong>
+  $scope.options = {
+    buttonDefaultText: 'Lorem ipsum',
+    ...
+  };
+
+});
+</pre>
+              <h3>Options</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>Option</th>
+                          <th>Default</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <code>buttonDefaultClass</code>
+                          </td>
+                          <td>'btn-primary'</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>buttonSubmittingClass</code>
+                          </td>
+                          <td>'btn-primary'</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>buttonSuccessClass</code>
+                          </td>
+                          <td>'btn-primary'</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>buttonErrorClass</code>
+                          </td>
+                          <td>'btn-danger'</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>buttonDefaultText</code>
+                          </td>
+                          <td>'Submit'</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>buttonSubmittingText</code>
+                          </td>
+                          <td>'Submitting...'</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>buttonSuccessText</code>
+                          </td>
+                          <td>'Completed'</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>buttonErrorText</code>
+                          </td>
+                          <td>'There was an error'</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>buttonSubmittingIcon</code>
+                          </td>
+                          <td>'glyphicon glyphicon-refresh'</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>buttonSuccessIcon</code>
+                          </td>
+                          <td>'glyphicon glyphicon-ok'</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>buttonErrorIcon</code>
+                          </td>
+                          <td>'glyphicon glyphicon-remove'</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>formIsInvalid</code>
+                          </td>
+                          <td>'form.$invalid'</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>animationCompleteTime</code>
+                          </td>
+                          <td>'2000'</td>
+                        </tr>
+                       <tr>
+                          <td>
+                            <code>iconsPosition</code>
+                          </td>
+                          <td>'left'</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/ng-bs-animated-button.js"></script>
+</body>
+</html>
