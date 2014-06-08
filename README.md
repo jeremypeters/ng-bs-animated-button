@@ -32,7 +32,7 @@ Angular/Bootstrap animated submit button directive.
     // Required - set to true on submission
     $scope.isSubmitting = null;
   
-    // Required - set to 'success' or 'error'  on success/failure
+    // Required - set to 'success' or 'error' on success/failure
     $scope.result = null;
   
     // Optional
