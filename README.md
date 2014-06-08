@@ -46,20 +46,20 @@ Angular/Bootstrap animated submit button directive.
 
 ### Options
 
-| Option                  | Default                     |
-| :---------------------- | :-------------------------- |
-| `buttonDefaultClass`    | btn-primary                 |
-| `buttonSubmittingClass` | btn-primary                 |
-| `buttonSuccessClass`    | btn-primary                 |
-| `buttonErrorClass`      | btn-danger                  |
-| `buttonDefaultText`     | Submit                      |
-| `buttonSubmittingText`  | Submitting...               |
-| `buttonSuccessText`     | Completed                   |
-| `buttonErrorText`       | There was an error          |
-| `buttonSubmittingIcon`  | glyphicon glyphicon-refresh |
-| `buttonSuccessIcon`     | glyphicon glyphicon-ok      |
-| `buttonErrorIcon`       | glyphicon glyphicon-remove  |
-| `formIsInvalid`         | form.$invalid               |
-| `animationCompleteTime` | 2000                        |
-| `iconsPosition`         | left                        |
+| Option                  | Default                       |
+| :---------------------- | :---------------------------- |
+| `buttonDefaultClass`    | 'btn-primary'                 |
+| `buttonSubmittingClass` | 'btn-primary'                 |
+| `buttonSuccessClass`    | 'btn-primary'                 |
+| `buttonErrorClass`      | 'btn-danger'                  |
+| `buttonDefaultText`     | 'Submit'                      |
+| `buttonSubmittingText`  | 'Submitting...'               |
+| `buttonSuccessText`     | 'Completed'                   |
+| `buttonErrorText`       | 'There was an error'          |
+| `buttonSubmittingIcon`  | 'glyphicon glyphicon-refresh' |
+| `buttonSuccessIcon`     | 'glyphicon glyphicon-ok'      |
+| `buttonErrorIcon`       | 'glyphicon glyphicon-remove'  |
+| `formIsInvalid`         | 'form.$invalid'               |
+| `animationCompleteTime` | '2000'                        |
+| `iconsPosition`         | 'left'                        |
 
