@@ -1,0 +1,9 @@
+.container-fluid {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.page-header {
+	padding-bottom: 20px;
+	margin: 40px 0 10px;
+}
