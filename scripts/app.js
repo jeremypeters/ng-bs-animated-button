@@ -124,3 +124,21 @@ app.controller('demo7Ctrl', function($scope, $timeout) {
   };
 
 });
+
+app.controller('demo8Ctrl', function($scope, $timeout) {
+
+  $scope.isSubmitting = null;
+  $scope.result       = null;
+
+  $scope.options = {
+    buttonSizeClass: 'btn-lg'
+  };
+
+  $scope.fakeSubmit = function() {
+    $scope.isSubmitting = true;
+    $timeout(function(){
+      $scope.result = 'success';
+    }, 2000);
+  };
+
+});

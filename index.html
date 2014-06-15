@@ -128,6 +128,22 @@ $scope.options = {
 </pre>
                   </div>
                 </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <strong>Demo 8: </strong>Button size
+                  </div>
+                  <div class="panel-body">
+                    <form name="form" role="form" ng-controller="demo8Ctrl" ng-submit="fakeSubmit()">
+                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                    </form>
+                    <br />
+<pre>
+$scope.options = {
+  buttonSizeClass: 'btn-lg'
+};
+</pre>
+                  </div>
+                </div>
             </div>
             <div class="col-sm-6">
               <h3>Install</h3>
@@ -192,6 +208,12 @@ app.controller('yourCtrl', function($scope) {
                             <code>buttonErrorClass</code>
                           </td>
                           <td>'btn-danger'</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <code>buttonSizeClass</code>
+                          </td>
+                          <td>null</td>
                         </tr>
                         <tr>
                           <td>

@@ -17,6 +17,7 @@ angular.module('jp.ng-bs-animated-button', []).
           buttonSubmittingClass: $scope.options.buttonSubmittingClass || 'btn-primary',
           buttonSuccessClass: $scope.options.buttonSuccessClass || 'btn-primary',
           buttonErrorClass: $scope.options.buttonErrorClass || 'btn-danger',
+          buttonSizeClass: $scope.options.buttonSizeClass || null,
           buttonDefaultText: $scope.options.buttonDefaultText || 'Submit',
           buttonSubmittingText: $scope.options.buttonSubmittingText || 'Submitting...',
           buttonSuccessText: $scope.options.buttonSuccessText || 'Completed',
@@ -30,7 +31,7 @@ angular.module('jp.ng-bs-animated-button', []).
         };
       },
       template:
-        '<button type="submit" class="btn {{buttonClass}} btn-ng-bs-animated clearfix" ng-disabled="{{formIsInvalid}}">' +
+        '<button type="submit" class="btn {{buttonClass}} {{buttonSize}} btn-ng-bs-animated clearfix" ng-disabled="{{formIsInvalid}}">' +
           '<div class="icons pull-{{iconsPosition}}">' +
             '<span class="{{buttonSubmittingIcon}} icon-spinner icon-submit hidden"></span>' +
             '<span class="{{buttonSuccessIcon}} icon-result icon-success hidden"></span>' +
@@ -39,7 +40,7 @@ angular.module('jp.ng-bs-animated-button', []).
           '<div class="text {{buttonTextFloatClass}}">{{buttonText}}</div>' +
         '</button>',
       link: function(scope, element) {
-        var el = angular.element(element);
+        var el = element;
 
         var icons = {
           submitting: angular.element(el[0].querySelector('.icon-submit')),
@@ -65,6 +66,7 @@ angular.module('jp.ng-bs-animated-button', []).
         };
 
         scope.buttonClass = scope.options.buttonDefaultClass;
+        scope.buttonSize = scope.options.buttonSizeClass;
         scope.formIsInvalid = scope.options.formIsInvalid;
         scope.iconsPosition = scope.options.iconsPosition;
         scope.buttonSubmittingIcon = scope.options.buttonSubmittingIcon;
