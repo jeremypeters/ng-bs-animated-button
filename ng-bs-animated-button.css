@@ -46,13 +46,13 @@
 }
 .btn-ng-bs-animated.is-active .icons {
   opacity: 1;
-  width: 13px;
+  width: 1em;
 }
 .btn-ng-bs-animated.is-active .icons.pull-left {
-  margin-right: 10px;
+  margin-right: 0.4em;
 }
 .btn-ng-bs-animated.is-active .icons.pull-right {
-  margin-left: 10px;
+  margin-left: 0.4em;
 }
 .btn-ng-bs-animated.is-active .icons .icon-spinner {
   -webkit-animation: btn-ng-bs-rotation 2s infinite linear;
