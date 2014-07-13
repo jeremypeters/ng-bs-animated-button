@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('jp.ng-bs-animated-button', []).
-  directive('jpNgBsAnimatedButton', function($timeout) {
+  directive('jpNgBsAnimatedButton', [ '$timeout', function($timeout) {
     return {
       restrict: 'AE',
       replace: true,
@@ -10,7 +10,7 @@ angular.module('jp.ng-bs-animated-button', []).
         result: '=',
         options: '=?'
       },
-      controller: function($scope) {
+      controller: [ '$scope', function($scope) {
         $scope.options = $scope.options || {};
         $scope.options = {
           buttonDefaultClass: $scope.options.buttonDefaultClass || 'btn-primary',
@@ -29,7 +29,7 @@ angular.module('jp.ng-bs-animated-button', []).
           animationCompleteTime: $scope.options.animationCompleteTime || '2000',
           iconsPosition: $scope.options.iconsPosition || 'left'
         };
-      },
+      }],
       template:
         '<button type="submit" class="btn {{buttonClass}} {{buttonSize}} btn-ng-bs-animated clearfix" ng-disabled="{{formIsInvalid}}">' +
           '<div class="icons pull-{{iconsPosition}}">' +
@@ -104,4 +104,5 @@ angular.module('jp.ng-bs-animated-button', []).
           }, true).bind(this);
       }
     };
-  });
+  }]
+);
