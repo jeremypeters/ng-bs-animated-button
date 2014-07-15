@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1 (July 15th, 2014)
+
+### Improvements
+
+* Added minification support
+
 ## 1.1.0 (June 15th, 2014)
 
 ### Features
