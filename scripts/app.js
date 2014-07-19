@@ -74,9 +74,9 @@ app.controller('demo5Ctrl', function($scope, $timeout) {
   $scope.result = null;
 
   $scope.options = {
-    buttonDefaultText: 'Lorem ipsum',
-    buttonSubmittingText: 'Dolor sit amet',
-    buttonSuccessText: 'Consectetur elit'
+    buttonDefaultText: '',
+    buttonSubmittingText: '',
+    buttonSuccessText: ''
   };
 
   $scope.fakeSubmit = function() {
@@ -132,6 +132,24 @@ app.controller('demo8Ctrl', function($scope, $timeout) {
 
   $scope.options = {
     buttonSizeClass: 'btn-lg'
+  };
+
+  $scope.fakeSubmit = function() {
+    $scope.isSubmitting = true;
+    $timeout(function(){
+      $scope.result = 'success';
+    }, 2000);
+  };
+
+});
+
+app.controller('demo9Ctrl', function($scope, $timeout) {
+
+  $scope.isSubmitting = null;
+  $scope.result       = null;
+
+  $scope.options = {
+    onlyIcons: true
   };
 
   $scope.fakeSubmit = function() {

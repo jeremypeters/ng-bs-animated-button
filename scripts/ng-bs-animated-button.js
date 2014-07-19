@@ -22,17 +22,20 @@ angular.module('jp.ng-bs-animated-button', []).
           buttonSubmittingText: $scope.options.buttonSubmittingText || 'Submitting...',
           buttonSuccessText: $scope.options.buttonSuccessText || 'Completed',
           buttonErrorText: $scope.options.buttonErrorText || 'There was an error',
+          buttonInitialIcon: $scope.options.buttonInitialIcon || 'glyphicon glyphicon-plus',
           buttonSubmittingIcon: $scope.options.buttonSubmittingIcon || 'glyphicon glyphicon-refresh',
           buttonSuccessIcon: $scope.options.buttonSuccessIcon || 'glyphicon glyphicon-ok',
           buttonErrorIcon: $scope.options.buttonErrorIcon || 'glyphicon glyphicon-remove',
           formIsInvalid: $scope.options.formIsInvalid || '',
           animationCompleteTime: $scope.options.animationCompleteTime || '2000',
-          iconsPosition: $scope.options.iconsPosition || 'left'
+          iconsPosition: $scope.options.iconsPosition || 'left',
+          onlyIcons: $scope.options.onlyIcons || false
         };
       }],
       template:
-        '<button type="submit" class="btn {{buttonClass}} {{buttonSize}} btn-ng-bs-animated clearfix" ng-disabled="{{formIsInvalid}}">' +
+        '<button type="submit" class="btn {{buttonClass}} {{buttonSize}} {{onlyIcons}} btn-ng-bs-animated clearfix" ng-disabled="{{formIsInvalid}}">' +
           '<div class="icons pull-{{iconsPosition}}">' +
+            '<span class="{{buttonInitialIcon}} icon-initial"></span>' +
             '<span class="{{buttonSubmittingIcon}} icon-spinner icon-submit hidden"></span>' +
             '<span class="{{buttonSuccessIcon}} icon-result icon-success hidden"></span>' +
             '<span class="{{buttonErrorIcon}} icon-result icon-error hidden"></span>' +
@@ -43,6 +46,7 @@ angular.module('jp.ng-bs-animated-button', []).
         var el = element;
 
         var icons = {
+          initial: angular.element(el[0].querySelector('.icon-initial')),
           submitting: angular.element(el[0].querySelector('.icon-submit')),
           result: angular.element(el[0].querySelectorAll('.icon-result')),
           success: angular.element(el[0].querySelector('.icon-success')),
@@ -75,6 +79,10 @@ angular.module('jp.ng-bs-animated-button', []).
         scope.iconsPosition = scope.options.iconsPosition;
         scope.buttonText = scope.options.buttonDefaultText;
         scope.buttonTextFloatClass = setButtonTextFloatClass();
+
+        if(scope.options.onlyIcons){
+          scope.onlyIcons = 'icons-only';
+        };
 
         scope.$watch('isSubmitting', function(newValue) {
             if (newValue) {

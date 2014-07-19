@@ -144,6 +144,22 @@ $scope.options = {
 </pre>
                   </div>
                 </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <strong>Demo 9: </strong>Only icons
+                  </div>
+                  <div class="panel-body">
+                    <form name="form" role="form" ng-controller="demo9Ctrl" ng-submit="fakeSubmit()">
+                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                    </form>
+                    <br />
+<pre>
+$scope.options = {
+  onlyIcons: true
+};
+</pre>
+                  </div>
+                </div>
             </div>
             <div class="col-sm-6">
               <h3>Install</h3>
