@@ -55,6 +55,12 @@
 .btn-ng-bs-animated.icons-only.is-active .icons.pull-left {
   margin-right: 0;
 }
+.btn-ng-bs-animated .icon-initial {
+  display: none;
+}
+.btn-ng-bs-animated.icons-only .icon-initial {
+  display: inline-block;
+}
 .btn-ng-bs-animated.is-active .icon-initial {
   display: none;
 }
