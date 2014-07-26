@@ -73,6 +73,7 @@ angular.module('jp.ng-bs-animated-button', []).
         scope.buttonSize = scope.options.buttonSizeClass;
         scope.formIsInvalid = scope.options.formIsInvalid;
         scope.iconsPosition = scope.options.iconsPosition;
+        scope.buttonInitialIcon = scope.options.buttonInitialIcon;
         scope.buttonSubmittingIcon = scope.options.buttonSubmittingIcon;
         scope.buttonSuccessIcon = scope.options.buttonSuccessIcon;
         scope.buttonErrorIcon = scope.options.buttonErrorIcon;

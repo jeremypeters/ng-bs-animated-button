@@ -44,12 +44,19 @@
   -o-transition: opacity 0.15s, width 0.15s;
   transition: opacity 0.15s, width 0.15s;
 }
+.btn-ng-bs-animated.icons-only .icons,
 .btn-ng-bs-animated.is-active .icons {
   opacity: 1;
   width: 1em;
 }
 .btn-ng-bs-animated.is-active .icons.pull-left {
   margin-right: 0.4em;
+}
+.btn-ng-bs-animated.icons-only.is-active .icons.pull-left {
+  margin-right: 0;
+}
+.btn-ng-bs-animated.is-active .icon-initial {
+  display: none;
 }
 .btn-ng-bs-animated.is-active .icons.pull-right {
   margin-left: 0.4em;
@@ -59,4 +66,7 @@
   -moz-animation: btn-ng-bs-rotation 2s infinite linear;
   -o-animation: btn-ng-bs-rotation 2s infinite linear;
   animation: btn-ng-bs-rotation 2s infinite linear;
+}
+.btn-ng-bs-animated.icons-only .text {
+  display: none;
 }

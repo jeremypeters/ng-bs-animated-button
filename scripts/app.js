@@ -33,7 +33,7 @@ app.controller('demo2Ctrl', function($scope, $timeout) {
 app.controller('demo3Ctrl', function($scope, $timeout) {
 
   $scope.isSubmitting = null;
-  $scope.result       = null;
+  $scope.result = null;
 
   $scope.options = {
     iconsPosition: 'right'
@@ -56,7 +56,7 @@ app.controller('demo4Ctrl', function($scope, $timeout) {
   $scope.options = {
     buttonDefaultClass: 'btn-default',
     buttonSubmittingClass: 'btn-info',
-    buttonSuccessClass: 'btn-success'
+    buttonSuccessClass: 'btn-success',
   };
 
   $scope.fakeSubmit = function() {
@@ -94,8 +94,8 @@ app.controller('demo6Ctrl', function($scope, $timeout) {
   $scope.result = null;
 
   $scope.options = {
-    buttonSubmittingIcon  : 'fa fa-spinner',
-    buttonSuccessIcon     : 'fa fa-smile-o'
+    buttonSubmittingIcon: 'fa fa-spinner',
+    buttonSuccessIcon: 'fa fa-smile-o'
   };
 
   $scope.fakeSubmit = function() {
@@ -128,7 +128,7 @@ app.controller('demo7Ctrl', function($scope, $timeout) {
 app.controller('demo8Ctrl', function($scope, $timeout) {
 
   $scope.isSubmitting = null;
-  $scope.result       = null;
+  $scope.result = null;
 
   $scope.options = {
     buttonSizeClass: 'btn-lg'
@@ -146,7 +146,7 @@ app.controller('demo8Ctrl', function($scope, $timeout) {
 app.controller('demo9Ctrl', function($scope, $timeout) {
 
   $scope.isSubmitting = null;
-  $scope.result       = null;
+  $scope.result = null;
 
   $scope.options = {
     onlyIcons: true
@@ -160,3 +160,26 @@ app.controller('demo9Ctrl', function($scope, $timeout) {
   };
 
 });
+
+app.controller('demo10Ctrl', function($scope, $timeout) {
+
+  $scope.isSubmitting = null;
+  $scope.result = null;
+
+  $scope.options = {
+    onlyIcons: true,
+    buttonInitialIcon: 'fa fa-send',
+    buttonSubmittingIcon: 'fa fa-circle-o-notch',
+    buttonSuccessIcon: 'fa fa-thumbs-up'
+  };
+
+  $scope.fakeSubmit = function() {
+    $scope.isSubmitting = true;
+    $timeout(function(){
+      $scope.result = 'success';
+    }, 2000);
+  };
+
+});
+
+

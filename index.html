@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" />
     <link rel="stylesheet" href="css/page.css">
     <link rel="stylesheet" href="css/ng-bs-animated-button.css">
   </head>
@@ -23,51 +23,51 @@
         <div class="row">
             <div class="col-sm-6">
               <h3>Demos</h3>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <strong>Demo 1: </strong>Default options | success
-                  </div>
-                  <div class="panel-body">
-                    <form name="form" role="form" ng-controller="demo1Ctrl" ng-submit="fakeSubmit()">
-                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
-                    </form>
-                  </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <strong>Demo 1: </strong>Default options | success
                 </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <strong>Demo 2: </strong>Default options | error
-                  </div>
-                  <div class="panel-body">
-                    <form name="form" role="form" ng-controller="demo2Ctrl" ng-submit="fakeSubmit()">
-                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
-                    </form>
-                  </div>
+                <div class="panel-body">
+                  <form name="form" role="form" ng-controller="demo1Ctrl" ng-submit="fakeSubmit()">
+                    <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                  </form>
                 </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <strong>Demo 3: </strong>Icons on right
-                  </div>
-                  <div class="panel-body">
-                    <form name="form" role="form" ng-controller="demo3Ctrl" ng-submit="fakeSubmit()">
-                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
-                    </form>
-                    <br />
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <strong>Demo 2: </strong>Default options | error
+                </div>
+                <div class="panel-body">
+                  <form name="form" role="form" ng-controller="demo2Ctrl" ng-submit="fakeSubmit()">
+                    <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                  </form>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <strong>Demo 3: </strong>Icons on right
+                </div>
+                <div class="panel-body">
+                  <form name="form" role="form" ng-controller="demo3Ctrl" ng-submit="fakeSubmit()">
+                    <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                  </form>
+                  <br />
 <pre>
 $scope.options = {
   iconsPosition: 'right'
 };
 </pre>
-                  </div>
                 </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <strong>Demo 4: </strong>Different colours for each state
-                  </div>
-                  <div class="panel-body">
-                    <form name="form" role="form" ng-controller="demo4Ctrl" ng-submit="fakeSubmit()">
-                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
-                    </form>
-                    <br />
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <strong>Demo 4: </strong>Different colours for each state
+                </div>
+                <div class="panel-body">
+                  <form name="form" role="form" ng-controller="demo4Ctrl" ng-submit="fakeSubmit()">
+                    <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                  </form>
+                  <br />
 <pre>
 $scope.options = {
   buttonDefaultClass: 'btn-default',
@@ -75,17 +75,17 @@ $scope.options = {
   buttonSuccessClass: 'btn-success'
 };
 </pre>
-                  </div>
                 </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <strong>Demo 5: </strong>Custom text for each state
-                  </div>
-                  <div class="panel-body">
-                    <form name="form" role="form" ng-controller="demo5Ctrl" ng-submit="fakeSubmit()">
-                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
-                    </form>
-                    <br />
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <strong>Demo 5: </strong>Custom text for each state
+                </div>
+                <div class="panel-body">
+                  <form name="form" role="form" ng-controller="demo5Ctrl" ng-submit="fakeSubmit()">
+                    <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                  </form>
+                  <br />
 <pre>
 $scope.options = {
   buttonDefaultText: 'Lorem ipsum',
@@ -93,73 +93,92 @@ $scope.options = {
   buttonSuccessText: 'Consectetur elit'
 };
 </pre>
-                  </div>
                 </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <strong>Demo 6: </strong>Using Font Awesome icons
-                  </div>
-                  <div class="panel-body">
-                    <form name="form" role="form" ng-controller="demo6Ctrl" ng-submit="fakeSubmit()">
-                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
-                    </form>
-                    <br />
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <strong>Demo 6: </strong>Using Font Awesome icons
+                </div>
+                <div class="panel-body">
+                  <form name="form" role="form" ng-controller="demo6Ctrl" ng-submit="fakeSubmit()">
+                    <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                  </form>
+                  <br />
 <pre>
 $scope.options = {
   buttonSubmittingIcon: 'fa fa-spinner',
-  buttonSuccessIcon: 'fa fa-smile-o',
+  buttonSuccessIcon: 'fa fa-smile-o'
 };
 </pre>
-                  </div>
                 </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <strong>Demo 7: </strong>Custom animation complete hold timing
-                  </div>
-                  <div class="panel-body">
-                    <form name="form" role="form" ng-controller="demo7Ctrl" ng-submit="fakeSubmit()">
-                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
-                    </form>
-                    <br />
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <strong>Demo 7: </strong>Custom animation complete hold timing
+                </div>
+                <div class="panel-body">
+                  <form name="form" role="form" ng-controller="demo7Ctrl" ng-submit="fakeSubmit()">
+                    <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                  </form>
+                  <br />
 <pre>
 $scope.options = {
   animationCompleteTime: '5000'
 };
 </pre>
-                  </div>
                 </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <strong>Demo 8: </strong>Button size
-                  </div>
-                  <div class="panel-body">
-                    <form name="form" role="form" ng-controller="demo8Ctrl" ng-submit="fakeSubmit()">
-                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
-                    </form>
-                    <br />
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <strong>Demo 8: </strong>Button size
+                </div>
+                <div class="panel-body">
+                  <form name="form" role="form" ng-controller="demo8Ctrl" ng-submit="fakeSubmit()">
+                    <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                  </form>
+                  <br />
 <pre>
 $scope.options = {
   buttonSizeClass: 'btn-lg'
 };
 </pre>
-                  </div>
                 </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <strong>Demo 9: </strong>Only icons
-                  </div>
-                  <div class="panel-body">
-                    <form name="form" role="form" ng-controller="demo9Ctrl" ng-submit="fakeSubmit()">
-                      <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
-                    </form>
-                    <br />
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <strong>Demo 9: </strong>Only icons
+                </div>
+                <div class="panel-body">
+                  <form name="form" role="form" ng-controller="demo9Ctrl" ng-submit="fakeSubmit()">
+                    <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                  </form>
+                  <br />
 <pre>
 $scope.options = {
   onlyIcons: true
 };
 </pre>
-                  </div>
                 </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <strong>Demo 10: </strong>Only icons | custom icons
+                </div>
+                <div class="panel-body">
+                  <form name="form" role="form" ng-controller="demo10Ctrl" ng-submit="fakeSubmit()">
+                    <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options"></jp-ng-bs-animated-button>
+                  </form>
+                  <br />
+<pre>
+$scope.options = {
+  onlyIcons: true,
+  buttonInitialIcon: 'fa fa-send',
+  buttonSubmittingIcon: 'fa fa-circle-o-notch',
+  buttonSuccessIcon: 'fa fa-thumbs-up'
+};
+</pre>
+                </div>
+              </div>
             </div>
             <div class="col-sm-6">
               <h3>Install</h3>
@@ -257,6 +276,12 @@ app.controller('yourCtrl', function($scope) {
                         </tr>
                         <tr>
                           <td>
+                            <code>buttonInitialIcon</code>
+                          </td>
+                          <td>'glyphicon glyphicon-plus'</td>
+                        </tr>
+                        <tr>
+                          <td>
                             <code>buttonSubmittingIcon</code>
                           </td>
                           <td>'glyphicon glyphicon-refresh'</td>
@@ -290,6 +315,12 @@ app.controller('yourCtrl', function($scope) {
                             <code>iconsPosition</code>
                           </td>
                           <td>'left'</td>
+                        </tr>
+                       <tr>
+                          <td>
+                            <code>onlyIcons</code>
+                          </td>
+                          <td>false</td>
                         </tr>
                       </tbody>
                     </table>
