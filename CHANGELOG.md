@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0 (July 26th, 2014)
+
+### Improvements
+
+* Added 'icons only' option
+
 ## 1.1.1 (July 15th, 2014)
 
 ### Improvements

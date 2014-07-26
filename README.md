@@ -59,10 +59,11 @@ http://jeremypeters.github.io/ng-bs-animated-button/
 | `buttonSubmittingText`  | 'Submitting...'               |
 | `buttonSuccessText`     | 'Completed'                   |
 | `buttonErrorText`       | 'There was an error'          |
+| `buttonInitialIcon`     | 'glyphicon glyphicon-plus'    |
 | `buttonSubmittingIcon`  | 'glyphicon glyphicon-refresh' |
 | `buttonSuccessIcon`     | 'glyphicon glyphicon-ok'      |
 | `buttonErrorIcon`       | 'glyphicon glyphicon-remove'  |
 | `formIsInvalid`         | 'form.$invalid'               |
 | `animationCompleteTime` | '2000'                        |
 | `iconsPosition`         | 'left'                        |
-
+| `onlyIcons`             | false                         |
