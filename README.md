@@ -63,7 +63,7 @@ http://jeremypeters.github.io/ng-bs-animated-button/
 | `buttonSubmittingIcon`  | 'glyphicon glyphicon-refresh' |
 | `buttonSuccessIcon`     | 'glyphicon glyphicon-ok'      |
 | `buttonErrorIcon`       | 'glyphicon glyphicon-remove'  |
-| `formIsInvalid`         | 'form.$invalid'               |
+| `formIsInvalid`         | ''               |
 | `animationCompleteTime` | '2000'                        |
 | `iconsPosition`         | 'left'                        |
 | `onlyIcons`             | false                         |
