@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.0.2 (Nov 16th, 2014)
+
+### Fix
+
+* Corrected updated Angular dependency version number
+
+## 2.0.1 (Nov 16th, 2014)
+
+### Fix
+
+* Updated Angular dependency version number
+
 ## 2.0.0 (July 26th, 2014)
 
 ### Improvements
