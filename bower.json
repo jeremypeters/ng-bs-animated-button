@@ -1,6 +1,6 @@
 {
   "name": "ng-bs-animated-button",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "authors": [
     "Jeremy Peters <jezpeters@googlemail.com>"
   ],
@@ -24,6 +24,6 @@
     "CHANGELOG.md"
   ],
    "dependencies": {
-    "angular": ">=1.2.x"
+    "angular": ">=1.2.0"
   }
 }
