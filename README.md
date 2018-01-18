@@ -63,7 +63,11 @@ http://jeremypeters.github.io/ng-bs-animated-button/
 | `buttonSubmittingIcon`  | 'glyphicon glyphicon-refresh' |
 | `buttonSuccessIcon`     | 'glyphicon glyphicon-ok'      |
 | `buttonErrorIcon`       | 'glyphicon glyphicon-remove'  |
-| `formIsInvalid`         | ''               |
 | `animationCompleteTime` | '2000'                        |
 | `iconsPosition`         | 'left'                        |
 | `onlyIcons`             | false                         |
+
+#### Disabling the button
+  ```html
+  <jp-ng-bs-animated-button is-submitting="isSubmitting" result="result" options="options" form-is-invalid="formIsInvalid()"></jp-ng-bs-animated-button>
+  ```

@@ -8,7 +8,8 @@ angular.module('jp.ng-bs-animated-button', []).
       scope: {
         isSubmitting: '=',
         result: '=',
-        options: '=?'
+        options: '=?',
+        formIsInvalid: '&'
       },
       controller: [ '$scope', function($scope) {
         $scope.options = $scope.options || {};
@@ -26,14 +27,13 @@ angular.module('jp.ng-bs-animated-button', []).
           buttonSubmittingIcon: $scope.options.buttonSubmittingIcon || 'glyphicon glyphicon-refresh',
           buttonSuccessIcon: $scope.options.buttonSuccessIcon || 'glyphicon glyphicon-ok',
           buttonErrorIcon: $scope.options.buttonErrorIcon || 'glyphicon glyphicon-remove',
-          formIsInvalid: $scope.options.formIsInvalid || '',
           animationCompleteTime: $scope.options.animationCompleteTime || '2000',
           iconsPosition: $scope.options.iconsPosition || 'left',
           onlyIcons: $scope.options.onlyIcons || false
         };
       }],
       template:
-        '<button type="submit" class="btn {{buttonClass}} {{buttonSize}} {{onlyIcons}} btn-ng-bs-animated clearfix" ng-disabled="{{formIsInvalid}}">' +
+        '<button type="submit" class="btn {{buttonClass}} {{buttonSize}} {{onlyIcons}} btn-ng-bs-animated clearfix" ng-disabled="formIsInvalid()">' +
           '<div class="icons pull-{{iconsPosition}}">' +
             '<span class="{{buttonInitialIcon}} icon-initial"></span>' +
             '<span class="{{buttonSubmittingIcon}} icon-spinner icon-submit hidden"></span>' +
@@ -71,7 +71,6 @@ angular.module('jp.ng-bs-animated-button', []).
 
         scope.buttonClass = scope.options.buttonDefaultClass;
         scope.buttonSize = scope.options.buttonSizeClass;
-        scope.formIsInvalid = scope.options.formIsInvalid;
         scope.iconsPosition = scope.options.iconsPosition;
         scope.buttonInitialIcon = scope.options.buttonInitialIcon;
         scope.buttonSubmittingIcon = scope.options.buttonSubmittingIcon;
